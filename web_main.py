@@ -171,7 +171,7 @@ if uploaded_file is not None:
     sc.fit(X)    
     X_std = sc.transform(X)
 
-    load_clf = pickle.load(open('vandy_intern.pkl','rb'))
+    load_clf = pickle.load(open('created_model.pkl','rb'))
     p_array = load_clf.predict_proba(X_std)
     df = pd.DataFrame(p_array, index=x_name)
     fact_ls=[]
